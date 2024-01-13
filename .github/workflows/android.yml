@@ -36,11 +36,11 @@ jobs:
         with:
           releaseDirectory: |
             app/build/outputs/apk/v6/release
-          signingKeyBase64: ${{ secrets.ASIGNING_KEY }}
+          signingKeyBase64: bXlhcHAua2V5c3RvcmU=
           output: build/app/signed
-          alias: ${{ secrets.AALIAS }}
-          keyStorePassword: ${{ secrets.AKEY_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.AKEY_PASSWORD }}
+          alias: myapp
+          keyStorePassword: 1234567890
+          keyPassword: 1234567890
       - name: rename apk
         run: |
           cd build/app/signed
